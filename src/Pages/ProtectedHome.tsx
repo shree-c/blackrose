@@ -23,7 +23,9 @@ function ProtectedHome() {
     <div>
       {
         (isLoading) ? <Loading /> :
-          (isLoggedIn) ? <Navigate to={'/dashboard'} /> : <Navigate to={'/login'} />
+          (isLoggedIn) ?
+            <Navigate to={'/dashboard'} /> :
+            <Navigate to={'/login'} />
       }
     </div>
   )

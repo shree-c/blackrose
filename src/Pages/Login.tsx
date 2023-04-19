@@ -55,7 +55,9 @@ function Login() {
               ?
               <Navigate to='/dashboard' />
               :
-              <button onClick={handleSignIn} className='button'> <span className='text-green'>Sign in</span> with Google</button>
+              <button onClick={handleSignIn} className='button'>
+                <span className='text-green'>Sign in</span> with Google
+              </button>
           )
       }
     </div>

@@ -23,7 +23,9 @@ function Dashboard({ }) {
           (
             <div className='dashboardInfo'>
               <UserInfo user={user} />
-              <button onClick={handleSignOut} className='button signout'>Sign out</button>
+              <button onClick={handleSignOut} className='button signout'>
+                Sign out
+              </button>
             </div>
           )
       }

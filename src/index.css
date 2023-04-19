@@ -12,9 +12,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/* * {
-  outline: 1px solid blue;
-} */
+
 .loginBox {
   display: flex;
   min-height: calc(100vh - 180px);
