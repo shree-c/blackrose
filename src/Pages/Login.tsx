@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { signOut, getAuth, signInWithRedirect, GoogleAuthProvider, getRedirectResult, onAuthStateChanged } from 'firebase/auth'
 import { app } from '../firebaseInit'
 import { Navigate } from 'react-router-dom'
+import Loading from '../components/Loading'
 
 const auth = getAuth(app)
 const gAuthProvider = new GoogleAuthProvider()
@@ -47,7 +48,7 @@ function Login() {
     <div className='loginBox'>
       {
         (loading && !loginSuccessful) ?
-          (<h1>Loading...</h1>)
+          (<Loading />)
           :
           (
             (loginSuccessful)

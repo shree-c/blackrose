@@ -1,8 +1,8 @@
 import { Navigate } from 'react-router-dom'
-import InitialLoad from '../components/InitialLoad'
 import { useState, useEffect } from 'react'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { app } from '../firebaseInit'
+import Loading from '../components/Loading'
 
 const auth = getAuth(app)
 function ProtectedHome() {
@@ -22,7 +22,7 @@ function ProtectedHome() {
   return (
     <div>
       {
-        (isLoading) ? <InitialLoad /> :
+        (isLoading) ? <Loading /> :
           (isLoggedIn) ? <Navigate to={'/dashboard'} /> : <Navigate to={'/login'} />
       }
     </div>

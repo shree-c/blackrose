@@ -3,18 +3,91 @@
 :root {
   --accent-color: #0fff08;
 }
+
 body {
   background : black;
   color: white;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+/* * {
+  outline: 1px solid blue;
+} */
 .loginBox {
   display: flex;
-  height: calc(100vh - 20px);
+  min-height: calc(100vh - 180px);
   align-items: center;
   justify-content: center;
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
+
+#logoImg  {
+  height: 40px;
+  width: 40px;
+}
+
+#logoImg > * {
+  fill: var(--accent-color);
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+}
+
+.navItems > * {
+  margin-right: 15px;
+}
+
+nav .right {
+  font-size: 1.3rem;
+}
+
+/* loading */
+
+.load {
+  width: 60px;
+  height: 60px;
+}
+.load path {
+  animation: loading infinite linear 0.5s;
+}
+/* 
+.load > * {
+  fill: var(--accent-color)
+} */
+
+@keyframes loading {
+  0% {
+    fill: var(--accent-color);
+  }
+  100% {
+    fill: black;
+  }
+}
+
+
+/* footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: lighter;
+  height: 100px;
 }
 
 /* items */
@@ -31,6 +104,39 @@ body {
   cursor: pointer;
 }
 
+/* dashboard */
+
+.dashboardInfo {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.dashboardInfo .userInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dashboardInfo table {
+  table-layout: fixed;
+  margin: 30px;
+  border-collapse: collapse;
+}
+
+.dashboardInfo table td{
+  border: 1px solid white;
+  padding: 20px;
+}
+
+.dashboardInfo > .signout {
+  text-align: center;
+}
+
+.profilePhoto > img {
+  border-radius: 50px;
+}
 /* utilities */
 .text-green {
   color: var(--accent-color)
@@ -40,3 +146,26 @@ body {
   font-family: 'Leckerli One', cursive;
 }
 
+.active {
+  color: var(--accent-color)
+}
+
+.neonText {
+  text-shadow:
+    0 0 21px #fff,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+/* responsiveness */
+
+@media only screen and (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .navItems {
+    margin-bottom: 5px;
+  }
+}
