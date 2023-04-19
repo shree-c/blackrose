@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+:root {
+  --accent-color: #0fff08;
+}
+body {
+  background : black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.loginBox {
+  display: flex;
+  height: calc(100vh - 20px);
+  align-items: center;
+  justify-content: center;
+}
+
+/* items */
+.button {
+  background: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+  border: 1px solid white;
+  padding : 10px;
+}
+
+.button:hover {
+  color: grey;
+  cursor: pointer;
+}
+
+/* utilities */
+.text-green {
+  color: var(--accent-color)
+}
+
+.cursive {
+  font-family: 'Leckerli One', cursive;
+}
+
